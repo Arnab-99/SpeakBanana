@@ -39,8 +39,8 @@ body{
     clip-path: circle(20% at 10% 10%);
 }
 .title{
-    margin: 0;
-    padding: 20px;
+    margin: 20px;
+    padding: 50px;
     text-align: center;
     color: aliceblue;
     z-index: 100;
