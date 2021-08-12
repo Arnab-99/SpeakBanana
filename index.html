@@ -4,10 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speak Banana</title>
+    <title>SpeakFiction</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    
+    <section class="BlogSection">
+        <div class="title">
+            <h2>Choose The Langauge You Want To Speak </h2>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>MINION</h3>
+                    <p>Convert from English to Minion speak. This language is spoken by the minions in Despicable Me. The language is actually lots of languages. Yi kai yai yai bananna! Minion is a registered trademark of Universal Studios.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>VALARYAN</h3>
+                    <p>Convert from English to Valyrian. A fictional language family in their television "series Game of Thrones".</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>PIRATE</h3>
+                    <p>Convert from English to Pirate speak. Shiver me timbers! I be needin' t' send 'em all to Davy Jones' locker. Arrrrr! Anyway go ahead and translate and have some fun!</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare:true,
+            "max-glare":.8,
+        });
+    </script>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll',function(){
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 +'px';
+            moon.style.left = -value * 0.5 +'px';
+            mountain.style.top = -value * 0.15 +'px';
+            road.style.top = value * 0.15 +'px';
+            text.style.top = value * 1 +'px';
+        })
+        VanillaTilt.init(document.querySelector(".card"), {
+        max: 25,
+        speed: 400
+          });
+    </script>
     
 </body>
 </html>
