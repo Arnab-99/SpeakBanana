@@ -40,7 +40,6 @@ header nav a{
     margin: 0;
     padding: 0;
     font-size: 2em;
-    color: #fff;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -51,29 +50,107 @@ header nav a{
 }
 .container .heading{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     max-width: 100%;
     max-height: 30vh;
 
 }
+.translator-section{
+    width:100% ;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
 .translator-box{
     display: flex;
-    max-width: 100vh;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
 }
 .translator-box textarea{
-    height: 50vh;
+    height: 20vh;
     width: 70vh;
-    padding: 10%;
+    padding: 10px 20px 5px;
     border: #fff;
     color: #000;
+    resize: none;
     font-weight: 700;
     font-size: 0.6em;
 }
+
+
+/* botam */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-container a{
+    position: relative;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+    margin: 20px;
+}
+.btn-container .btn{
+    position: relative;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    background: #fff;
+    margin: 20px;
+}
+.btn-container a::before,
+.btn-container a::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+}
+.btn-container .btn::before,
+.btn-container .btn::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+}
+.btn-container a:hover::before{
+    inset: -3;
+}
+.btn-container a:hover::after{
+    inset: -3;
+    filter: blur(10px);
+}
+.btn-container a:nth-child(1):before,
+.btn-container a:nth-child(1):after
+{
+    background: linear-gradient(45deg,#00ccff,#0e1538,#d400d4);
+}
+
+.btn-container a span{
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #0e1538;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #0e1538;
+}
+
 
 
 footer{
